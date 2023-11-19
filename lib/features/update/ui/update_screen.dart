@@ -71,12 +71,7 @@ class EditScreen extends StatelessWidget {
                           title: titleController.text.trim(),
                           description: descroptionConroller.text.trim()));
                       context.read<StudentBloc>().add(FetchSucessEvent());
-                    },  
-
-
-
-                    
-                       
+                    },
                     child: const Text('Edit')),
               ),
             ],

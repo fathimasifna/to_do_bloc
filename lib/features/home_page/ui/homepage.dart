@@ -28,7 +28,10 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 context.read<StudentBloc>().add(FetchSucessEvent());
               },
-              icon: const Icon(Icons.refresh,color:Colors.deepOrange,))
+              icon: const Icon(
+                Icons.refresh,
+                color: Colors.deepOrange,
+              ))
         ],
         title: const Text(
           'Home',
@@ -70,13 +73,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           itemBuilder: (context) {
                             return [
                               const PopupMenuItem(
-                                  value: 'update', child: Text('Update',style: TextStyle(color: Colors.deepOrange),)),
+                                  value: 'update',
+                                  child: Text(
+                                    'Update',
+                                    style: TextStyle(color: Colors.deepOrange),
+                                  )),
                               const PopupMenuItem(
-                                  value: 'delete', child: Text('Delete',style: TextStyle(color: Colors.deepOrange)))
+                                  value: 'delete',
+                                  child: Text('Delete',
+                                      style:
+                                          TextStyle(color: Colors.deepOrange)))
                             ];
                           },
                         ),
-                        leading: CircleAvatar(child: Text('${index + 1}',style: const TextStyle(color: Colors.deepOrange),),),
+                        leading: CircleAvatar(
+                          child: Text(
+                            '${index + 1}',
+                            style: const TextStyle(color: Colors.deepOrange),
+                          ),
+                        ),
                         title: Text(data.title),
                         subtitle: Text(data.description),
                       );
@@ -106,7 +121,10 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ));
         },
-        child: const Icon(Icons.add,color: Color.fromARGB(255, 100, 100, 100),),
+        child: const Icon(
+          Icons.add,
+          color: Color.fromARGB(255, 100, 100, 100),
+        ),
       ),
     );
   }
@@ -132,11 +150,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text('Cancel',
                       style: TextStyle(color: Colors.white))),
               ElevatedButton(
-                style: ButtonStyle(backgroundColor:  MaterialStateProperty.all(Colors.deepOrange)),
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.deepOrange)),
                   onPressed: () {
                     context
                         .read<StudentBloc>()
-                         .add(DeleteSucessfullEvetn(id: id));
+                        .add(DeleteSucessfullEvetn(id: id));
                     context.read<StudentBloc>().add(FetchSucessEvent());
                     Navigator.of(context).pop();
                   },

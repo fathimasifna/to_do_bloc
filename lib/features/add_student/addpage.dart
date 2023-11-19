@@ -67,7 +67,7 @@ class AddScreen extends StatelessWidget {
                     },
                     child: const Text('Click ',
                         style: TextStyle(
-                            color:  Color.fromARGB(255, 100, 100, 100)))),
+                            color: Color.fromARGB(255, 100, 100, 100)))),
               ),
             ],
           ),

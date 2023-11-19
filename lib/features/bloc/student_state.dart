@@ -4,7 +4,7 @@ abstract class StudentState {}
 
 abstract class StudetActionState extends StudentState {}
 
-final class StudentInitial extends StudentState {}
+final class  StudentInitial extends StudentState {}
 
 final class FetchloadingState extends StudentState {}
 
